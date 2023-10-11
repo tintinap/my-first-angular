@@ -24,10 +24,10 @@ import { TopBarComponent } from './top-bar/top-bar.component';
                 path: '',
                 component: ProductListComponent
             },
-            {
-                path: '/nod',
-                component: TopBarComponent
-            }
+            // {
+            //     path: '/nod',
+            //     component: TopBarComponent
+            // }
           ]
        )
     ],
