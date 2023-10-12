@@ -5,8 +5,8 @@ export const products = [
         des : 'extra large phone'
     },
     {
-        name: 'Phone XL',
-        price: 799,
+        name: 'Phone L',
+        price: 699,
         des: 'large phone'
     }
-]
+];
