@@ -4,5 +4,5 @@
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.des }}</p>
 
-  <button (click)="addToCart(product)">Buy</button>
+  <button (click)="addToCart(product)" [routerLink]="['']">Buy</button>
 </div>
