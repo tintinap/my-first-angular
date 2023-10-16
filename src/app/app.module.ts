@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BehaviorCpacComponent } from './components/behavior-cpac/behavior-cpac.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
         ProductAlertsComponent,
         ProductDetailComponent,
         CartComponent,
-        ShippingComponent
+        ShippingComponent,
+        BehaviorCpacComponent
     ],
     imports: [
         BrowserModule,

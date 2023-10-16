@@ -1,0 +1,141 @@
+<div class="container-fluid bg-primary">
+  Lorem ipsum dolor sit amet consectetur
+</div>
+<div>space</div>
+<!-- <div>
+  <table class="table table-bordered">
+    <thead> -->
+      <!-- <tr>
+        <th class="text-center" *ngFor="let b of behaviors">{{ b.col }}</th>
+      </tr> -->
+    <!-- </thead>
+    <tbody>
+      <tr>
+        <td class="text-center" *ngFor="let b of behaviors">{{ b.col }}</td>
+      </tr>
+      <tr *ngFor="let b of behaviors">
+        <div *ngIf="b.solution.length>=b.reason.length;else reasonNoSpan">
+          <td [attr.rowspan]="b.solution.length">{{b.col[1] }} solu {{b.solution.length}}</td>
+        </div>
+        <ng-template #reasonNoSpan>
+          <td [attr.rowspan]="b.reason.length">{{b.col[1] }} reason {{b.solution.length}}</td>
+        </ng-template>
+        <td>{{b.reason}}</td> -->
+          <!-- <td *ngFor="let r of b.reason">
+            <tr>{{r}}</tr>
+          </td> -->
+          <!-- <td> {{ b.reason }}</td> -->
+          <!-- <td>{{b.solution}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<div class="container">
+  <h1>Person Cities Table</h1>
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td rowspan="3">John Doe</td>
+              <td rowspan="3">30</td>
+              <td>New York</td>
+          </tr>
+          <tr>
+              <td>Los Angeles</td>
+          </tr>
+          <tr>
+              <td>Chicago</td>
+          </tr>
+          <tr>
+              <td rowspan="3">Jane Smith</td>
+              <td rowspan="3">25</td>
+              <td>Miami</td>
+          </tr>
+          <tr>
+              <td>San Francisco</td>
+          </tr>
+          <tr>
+              <td>Houston</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td rowspan="2">John Doe</td>
+      <td>35</td>
+      <td>New York</td>
+  </tr>
+  <tr>
+      <td>25</td>
+      <td>Los Angeles</td>
+  </tr>
+  <tr>
+    <td>Jane Smith</td>
+      <td>30</td>
+      <td>Chicago</td>
+  </tr>
+</table>
+for i in range(len(behavior)):
+  check if behavior.[i].reason.length > 1 or behavior[i].solution.length > 1
+     for j in range(behavior.[i].reason.length):
+      <tr>
+        if j == 0:
+          <td>col[i]</td>
+        <td>reason[j]</td>
+        <td>solution[j]</td>
+      </tr>
+  else:
+    <tr>
+      <td>col[i]</td>
+      <td>reason[0]</td>
+      <td>solution[0]</td>
+    </tr>
+<div>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td class="text-center" *ngFor="let b of behaviors">{{ b.col }}</td>
+      </tr>
+      <tr *ngFor="let b of behaviors">
+        <td>{{b.col[3]}}</td>
+        <td *ngIf="b.reason.length >1 ;else t1">
+          <ul *ngFor="let r of b.reason">
+            <li>{{r}}</li>
+          </ul>
+        </td>
+        <ng-template #t1>
+          <td>
+            <ul>
+              <li>{{b.reason[0]}}</li>
+            </ul>
+          </td>
+        </ng-template>
+        <td *ngIf="b.solution.length >1 ;else t2">
+          <ul *ngFor="let s of b.solution">
+            <li>{{s}}</li>
+          </ul>
+        </td>
+        <ng-template #t2>
+          <td>
+            <ul>
+              <li>{{b.solution[0]}}</li>
+            </ul>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+</div>
